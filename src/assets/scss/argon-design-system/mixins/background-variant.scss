@@ -1,4 +1,14 @@
 // Contextual backgrounds
+
+
+@mixin hero-background($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+
 @mixin bg-variant($parent, $color) {
     #{$parent} {
         background-color: $color !important;
@@ -16,6 +26,7 @@
         background: linear-gradient(35deg, $color 0, adjust-hue($color, 25%) 100%) !important;
     }
 }
+
 
 @mixin bg-translucent-variant($parent, $color) {
     #{$parent} {

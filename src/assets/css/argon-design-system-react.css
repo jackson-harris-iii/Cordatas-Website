@@ -22,6 +22,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
+  --cordatas-light-orange:#e09900;
+  --cordatas-dark-orange:#e66833;
+  --cordatas-light-blue:#007a7a;
+  --cordatas-dark-blue:#003f5a;
+
   --blue: #5e72e4;
   --indigo: #5603ad;
   --purple: #8965e0;
@@ -12913,7 +12918,7 @@ textarea[resize="horizontal"] {
   font-size: .875rem;
   letter-spacing: .05px; }
   .navbar-brand img {
-    height: 30px; }
+    height: 75px; }
 
 .navbar-dark .navbar-brand {
   color: #fff; }
@@ -17043,3 +17048,5 @@ td.rdtYear:hover {
   width: 1%; }
 
 /*# sourceMappingURL=argon-design-system-react.css.map */
+
+/* Cordatas Site Style */
