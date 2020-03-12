@@ -38,7 +38,7 @@ import {
 
 // core components
 import CordatasNavbar from "components/Navbars/CordatasNavbar.jsx";
-import CardsFooter from "components/Footers/CardsFooter.js";
+import CardsFooter from "components/Footers/SimpleFooter.js";
 
 // index page sections
 import Download from "./IndexSections/Download.js";
@@ -47,6 +47,9 @@ import Download from "./IndexSections/Download.js";
 import HeroImage from '../assets/img/hero-image2.jpg'
 
 import aiResearchers from '../assets/img/ai-researchers.jpg'
+
+// import hubspot form submit
+import HubspotForm from 'react-hubspot-form'
 
 class Index extends React.Component {
   state = {};
@@ -62,7 +65,7 @@ class Index extends React.Component {
         <main ref="main">
           <div className="position-relative">
             {/* shape Hero */}
-            <section className="section section-lg section-shaped pb-250" style={{ backgroundImage: `url(${HeroImage})`, backgroundSize: 'contain', backgroundPosition: 'center' }}>>
+            <section className="section section-lg section-shaped pb-250 hero-header">
               <div className="shape shape-style-1 shape-default">
                 <span />
                 <span />
@@ -509,7 +512,7 @@ class Index extends React.Component {
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-1-800x800.jpg")}
+                      src={require("assets/img/thomas.jpg")}
                       style={{ width: "200px" }}
                     />
                     <div className="pt-4 text-center">
@@ -517,7 +520,7 @@ class Index extends React.Component {
                         <span className="d-block mb-1">Thomas Thies</span>
                         <small className="h6 text-muted">Chief Executive Officer (CEO)</small>
                       </h5>
-                      <div className="mt-3">
+                      {/* <div className="mt-3">
                         <Button
                           className="btn-icon-only rounded-circle"
                           color="warning"
@@ -542,7 +545,7 @@ class Index extends React.Component {
                         >
                           <i className="fa fa-dribbble" />
                         </Button>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </Col>
@@ -551,7 +554,7 @@ class Index extends React.Component {
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-2-800x800.jpg")}
+                      src={require("assets/img/jackson.jpg")}
                       style={{ width: "200px" }}
                     />
                     <div className="pt-4 text-center">
@@ -561,7 +564,7 @@ class Index extends React.Component {
                           Chief Experience Officer (CXO) 
                         </small>
                       </h5>
-                      <div className="mt-3">
+                      {/* <div className="mt-3">
                         <Button
                           className="btn-icon-only rounded-circle"
                           color="primary"
@@ -586,24 +589,24 @@ class Index extends React.Component {
                         >
                           <i className="fa fa-dribbble" />
                         </Button>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </Col>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
+                <Col className="mb-5 mb-lg-0" lg="4" md="6">
                   <div className="px-4">
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-3-800x800.jpg")}
+                      src={require("assets/img/taylor.jpg")}
                       style={{ width: "200px" }}
                     />
                     <div className="pt-4 text-center">
                       <h5 className="title">
-                        <span className="d-block mb-1">Alexander Smith</span>
-                        <small className="h6 text-muted">UI/UX Designer</small>
+                        <span className="d-block mb-1">Taylor Thomas</span>
+                        <small className="h6 text-muted">Chief Operating Officer (COO)</small>
                       </h5>
-                      <div className="mt-3">
+                      {/* <div className="mt-3">
                         <Button
                           className="btn-icon-only rounded-circle"
                           color="info"
@@ -628,7 +631,7 @@ class Index extends React.Component {
                         >
                           <i className="fa fa-dribbble" />
                         </Button>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </Col>
@@ -642,23 +645,24 @@ class Index extends React.Component {
                   <Row className="align-items-center">
                     <Col lg="8">
                       <h3 className="text-white">
-                        We made website building easier for you.
+                        We made the AI/ML cluster workflow easy.
                       </h3>
                       <p className="lead text-white mt-3">
-                        I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture.
+                        You can cluster computers, maintain and manage the cluster, load and offload experiments, and even perform live and post-analysis on your data all from a beautiful central location!
                       </p>
                     </Col>
                     <Col className="ml-lg-auto" lg="3">
                       <Button
                         block
                         className="btn-white"
-                        color="default"
+                        style={{ color: '#007a7a' }}
                         href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
                         size="lg"
                       >
-                        Download React
+                        <span className="btn-inner--icon mr-1">
+                          <i className="fa fa-flask" />
+                        </span>
+                        <span className="btn-inner--text">Beta Access</span>
                       </Button>
                     </Col>
                   </Row>
@@ -668,7 +672,7 @@ class Index extends React.Component {
           </section>
           <section className="section section-lg bg-gradient-default">
             <Container className="pt-lg pb-300">
-              <Row className="text-center justify-content-center">
+              {/* <Row className="text-center justify-content-center">
                 <Col lg="10">
                   <h2 className="display-3 text-white">Build something</h2>
                   <p className="lead text-white">
@@ -678,8 +682,8 @@ class Index extends React.Component {
                     to low ice.
                   </p>
                 </Col>
-              </Row>
-              <Row className="row-grid mt-5">
+              </Row> */}
+              {/* <Row className="row-grid mt-5">
                 <Col lg="4">
                   <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
                     <i className="ni ni-settings text-primary" />
@@ -710,7 +714,7 @@ class Index extends React.Component {
                     up the bulk of the card's content.
                   </p>
                 </Col>
-              </Row>
+              </Row> */}
             </Container>
             {/* SVG separator */}
             <div className="separator separator-bottom separator-skew zindex-100">
@@ -735,9 +739,9 @@ class Index extends React.Component {
                 <Col lg="8">
                   <Card className="bg-gradient-secondary shadow">
                     <CardBody className="p-lg-5">
-                      <h4 className="mb-1">Want to work with us?</h4>
+                      <h4 className="mb-1">Want to know more?</h4>
                       <p className="mt-0">
-                        Your project is very important to us.
+                        Contact Us!
                       </p>
                       <FormGroup
                         className={classnames("mt-5", {
@@ -804,7 +808,7 @@ class Index extends React.Component {
               </Row>
             </Container>
           </section>
-          <Download />
+          {/* <Download /> */}
         </main>
         <CardsFooter />
       </>
