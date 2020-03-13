@@ -1,5 +1,15 @@
 const gulp = require("gulp");
+const del = require('del');
+const dir = {
+	src: 'src/',
+	build: 'build/',
+};
 const gap = require("gulp-append-prepend");
+
+gulp.task('clean', (done) => {
+	del.sync([dir.build]);
+	done();
+});
 
 // gulp.task("licenses", async function() {
 //   // this is to add Creative Tim licenses in the production mode for the minified js
@@ -52,7 +62,7 @@ const gap = require("gulp-append-prepend");
 
 //   // this is to add Creative Tim licenses in the production mode for the minified css
 //   await gulp
-//     .src("build/static/css/*chunk.css", { base: "./" })
+//     .src("build/static/css/*chunk.css",   { base: "./" })
 //     .pipe(
 //       gap.prependText(`/*!
 
