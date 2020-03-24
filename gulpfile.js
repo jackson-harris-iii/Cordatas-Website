@@ -1,12 +1,14 @@
 const gulp = require("gulp");
 const del = require('del');
+
+const gap = require("gulp-append-prepend");
+
 const dir = {
 	src: 'src/',
 	build: 'build/',
 };
-const gap = require("gulp-append-prepend");
 
-gulp.task('clean', (done) => {
+gulp.task('default', (done) => {
 	del.sync([dir.build]);
 	done();
 });
